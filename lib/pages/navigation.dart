@@ -1,21 +1,21 @@
-import 'package:bid_leilao/pages/perfil.dart';
+import 'package:bid_leilao/profile/perfil.dart';
 import 'package:flutter/material.dart';
 
 import 'extract.dart';
 import 'home.dart';
 import 'lance.dart';
 
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({key}) : super(key: key);
+class Navegation extends StatefulWidget {
+  const Navegation({key}) : super(key: key);
 
   @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+  State<Navegation> createState() => _NavegationState();
 }
 
 /// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class _NavegationState extends State<Navegation> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
+  TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     Home(),

@@ -1,6 +1,7 @@
-import 'package:bid_leilao/pages/MyStatefulWidget.dart';
 import 'package:bid_leilao/pages/extract.dart';
-import 'package:bid_leilao/pages/perfil.dart';
+import 'package:bid_leilao/pages/navigation.dart';
+import 'package:bid_leilao/profile/perfil.dart';
+import 'package:bid_leilao/profile/login.dart';
 
 /// Flutter code sample for BottomNavigationBar
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      home: MyStatefulWidget(),
+      home: Login(),
     );
   }
 }
