@@ -67,11 +67,11 @@ class _LoginState extends State<Login> {
                 child: Text(
                   "Recuperar Senha",
                   textAlign: TextAlign.right,
-                   style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -105,26 +105,15 @@ class _LoginState extends State<Login> {
               ),
               child: SizedBox.expand(
                 child: TextButton(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Login",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w200,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                        textAlign: TextAlign.start,
-                      ),
-                      Container(
-                        child: SizedBox(
-                          child: Image.asset("assets/bone.png"),
-                          height: 28,
-                          width: 28,
-                        ),
-                      )
-                    ],
+                  child:Text(
+                    "Login",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                    
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -146,16 +135,14 @@ class _LoginState extends State<Login> {
             Container(
               height: 40,
               child: TextButton(
-                
                 child: Text(
                   "Cadastre-se",
                   textAlign: TextAlign.center,
-                   style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                  
+                  style: TextStyle(
+                    fontWeight: FontWeight.normal,
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
                 ),
                 onPressed: () {
                   Navigator.push(
