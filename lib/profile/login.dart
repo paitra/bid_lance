@@ -14,7 +14,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.only(top: 60, left: 40, right: 40),
+        padding: EdgeInsets.only(top: 120, left: 40, right: 40),
         color: Colors.red[700],
         child: ListView(
           children: <Widget>[
@@ -57,31 +57,34 @@ class _LoginState extends State<Login> {
                   fontSize: 20,
                 ),
               ),
-              style: TextStyle(fontSize: 20),
-            ),
-            Container(
-              height: 40,
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                child: Text(
-                  "Recuperar Senha",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => RecuperarSenha(),
-                    ),
-                  );
-                },
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
             ),
+            // Container(
+            //   height: 40,
+            //   alignment: Alignment.centerRight,
+            //   child: TextButton(
+            //     child: Text(
+            //       "Recuperar Senha",
+            //       textAlign: TextAlign.right,
+            //       style: TextStyle(
+            //         fontWeight: FontWeight.normal,
+            //         color: Colors.white,
+            //         fontSize: 20,
+            //       ),
+            //     ),
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //           builder: (context) => RecuperarSenha(),
+            //         ),
+            //       );
+            //     },
+            //   ),
+            // ),
             SizedBox(
               height: 40,
             ),
@@ -104,15 +107,14 @@ class _LoginState extends State<Login> {
               ),
               child: SizedBox.expand(
                 child: TextButton(
-                  child:Text(
+                  child: Text(
                     "Login",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontWeight: FontWeight.w200,
+                      fontWeight: FontWeight.bold,
                       color: Colors.white,
                       fontSize: 20,
                     ),
-                    
                   ),
                   onPressed: () {
                     Navigator.push(
@@ -138,7 +140,7 @@ class _LoginState extends State<Login> {
                   "Cadastre-se",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontWeight: FontWeight.normal,
+                    fontWeight: FontWeight.w300,
                     color: Colors.white,
                     fontSize: 20,
                   ),
