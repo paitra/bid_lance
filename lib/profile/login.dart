@@ -1,6 +1,5 @@
 import 'package:bid_leilao/pages/navigation.dart';
 import 'package:bid_leilao/profile/RecuperarSenha.dart';
-import 'package:bid_leilao/profile/RecuperarSenha.dart';
 import 'package:bid_leilao/profile/cadastro.dart';
 import 'package:flutter/material.dart';
 

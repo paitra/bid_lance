@@ -33,6 +33,7 @@ class _NavegationState extends State<Navegation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: PreferredSize(
           preferredSize: Size.fromHeight(60), // here the desired height
           child: Container(

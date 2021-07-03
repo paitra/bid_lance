@@ -148,11 +148,11 @@ class _HomeState extends State<Home> {
           ButtonTheme(
             child: ButtonBar(
               children: <Widget>[
-                FlatButton(
+                TextButton(
                   child: const Text('Edit', style: TextStyle(color: Colors.white)),
                   onPressed: () {},
                 ),
-                FlatButton(
+                TextButton(
                   child: const Text('Delete', style: TextStyle(color: Colors.white)),
                   onPressed: () {},
                 ),

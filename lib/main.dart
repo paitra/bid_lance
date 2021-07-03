@@ -1,6 +1,3 @@
-import 'package:bid_leilao/pages/extract.dart';
-import 'package:bid_leilao/pages/navigation.dart';
-import 'package:bid_leilao/profile/perfil.dart';
 import 'package:bid_leilao/profile/login.dart';
 
 /// Flutter code sample for BottomNavigationBar
@@ -14,8 +11,7 @@ import 'package:bid_leilao/profile/login.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'pages/home.dart';
-import 'pages/lance.dart';
+
 
 
 void main() => runApp(const MyApp());
