@@ -1,3 +1,4 @@
+import 'package:bid_leilao/models/RetornoAutenticacao.dart';
 import 'package:bid_leilao/profile/perfil.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ import 'home.dart';
 import 'lance.dart';
 
 class Navegation extends StatefulWidget {
-  const Navegation({key}) : super(key: key);
+   Navegation({Key key, RetornoAutenticacao retornoAtenticacao}) : super(key: key);
 
   @override
   State<Navegation> createState() => _NavegationState();

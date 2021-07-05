@@ -1,6 +1,8 @@
+import 'package:bid_leilao/models/Autenticacao.dart';
+import 'package:bid_leilao/models/RetornoAutenticacao.dart';
 import 'package:bid_leilao/pages/navigation.dart';
-import 'package:bid_leilao/profile/RecuperarSenha.dart';
 import 'package:bid_leilao/profile/cadastro.dart';
+import 'package:bid_leilao/service/Api.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -8,8 +10,25 @@ class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
 }
-
 class _LoginState extends State<Login> {
+  final loginController = TextEditingController();
+  final senhaController = TextEditingController();
+
+  final api = Api();
+
+  login({BuildContext context}) async {
+    RetornoAutenticacao retorno = await api.validarLogin(
+        Autenticacao(senha: senhaController.text, login: loginController.text));
+
+    if (retorno != null) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => Navegation(retornoAtenticacao: retorno)));
+    }
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,13 +135,8 @@ class _LoginState extends State<Login> {
                       fontSize: 20,
                     ),
                   ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Navegation(),
-                      ),
-                    );
+                  onPressed: () async {
+                    await login(context: context);
                   },
                 ),
               ),
