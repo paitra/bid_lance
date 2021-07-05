@@ -12,11 +12,11 @@ class Api {
 
   Future<RetornoAutenticacao> validarLogin(Autenticacao autenticacao) async {
     //ok
-    Uri url = Uri.parse(cabecalho + '/usuario/login');
+    Uri url = Uri.parse(cabecalho + 'usuario/login/');
 
     final response = await http.post(url,
         headers: getHeadres(), body: json.encode(autenticacao.toMap()));
-
+print(response.statusCode);
     if (response.statusCode == 200) {
       return RetornoAutenticacao.fromMap(jsonDecode(response.body));
     } else {
@@ -27,7 +27,7 @@ class Api {
 
   Map<String, String> getHeadres() {
     Map<String, String> map = Map();
-    map.addAll({'accept': 'application/json'});
+    map.addAll({'token': '8529267bd09088e4166ab6e4e6894c7e1a85928f'});
     map.addAll({'content-type': 'application/json'});
     //token
     return map;
