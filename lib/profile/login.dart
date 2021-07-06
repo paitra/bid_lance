@@ -6,7 +6,7 @@ import 'package:bid_leilao/service/Api.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
-  const Login({key}) : super(key: key);
+   Login({key}) : super(key: key);
   @override
   _LoginState createState() => _LoginState();
 }
@@ -47,6 +47,11 @@ class _LoginState extends State<Login> {
             ),
             TextFormField(
               // autofocus: true,
+              controller: loginController,
+              onChanged: (value) {},
+                  validator: (String value) {
+                    return value.length > 3 ? null : "Informe um login valido";
+                  },
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: "E-mail",
@@ -66,6 +71,10 @@ class _LoginState extends State<Login> {
             ),
             TextFormField(
               // autofocus: true,
+              controller: senhaController,
+              validator: (String value) {
+                    return value.length > 3 ? null : "Informe uma senha valida";
+                  },              
               keyboardType: TextInputType.text,
               obscureText: true,
               decoration: InputDecoration(

@@ -3,19 +3,19 @@ import "dart:convert";
 class RetornoAutenticacao {
   String senha;
   String email;
-  String nome;
+ 
 
-  RetornoAutenticacao({this.senha, this.email,this.nome});
+  RetornoAutenticacao({this.senha, this.email,});
 
   factory RetornoAutenticacao.fromMap(Map<String, dynamic> json) =>  RetornoAutenticacao(
       senha: json['senha'],
-      email: json['email'],
-      nome: json['nome']);
+      email: json['email']
+     );
 
   Map<String, dynamic> toMap() => {
     'senha': senha,
     'email': email,
-    'nome': nome
+    
   };
   RetornoAutenticacao clientFromJson(String value) {
     final jsonData = json.decode(value);

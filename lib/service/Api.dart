@@ -15,17 +15,17 @@ class Api {
     Uri url = Uri.parse(cabecalho + 'usuario/login/');
 
     final response = await http.post(url,
-        headers: getHeadres(), body: json.encode(autenticacao.toMap()));
-print(response.statusCode);
+        headers: getHeaders(), body: json.encode(autenticacao.toMap()));
+print(response.body);
     if (response.statusCode == 200) {
-      return RetornoAutenticacao.fromMap(jsonDecode(response.body));
+      return RetornoAutenticacao.fromMap(json.decode(response.body));
     } else {
       return null;
     }
   }
 
 
-  Map<String, String> getHeadres() {
+  Map<String, String> getHeaders() {
     Map<String, String> map = Map();
     map.addAll({'token': '8529267bd09088e4166ab6e4e6894c7e1a85928f'});
     map.addAll({'content-type': 'application/json'});
