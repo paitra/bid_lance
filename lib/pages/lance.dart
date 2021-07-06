@@ -1,5 +1,7 @@
-import 'package:bid_leilao/service/Request.dart';
+
+import 'package:bid_leilao/service/Api.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 class Lance extends StatefulWidget {
   @override
@@ -10,7 +12,7 @@ class _Lance extends State<Lance> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<List>(
-          future: Request.request.getProduto(),
+          future: Api.api.getProduto(),
           initialData: List(),
           builder: (context, snapshot) {
             return snapshot.hasData
