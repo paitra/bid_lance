@@ -1,9 +1,9 @@
 import 'package:bid_leilao/models/RetornoAutenticacao.dart';
+import 'package:bid_leilao/pages/navtopo.dart';
 import 'package:bid_leilao/profile/perfil.dart';
 import 'package:flutter/material.dart';
-
+import 'navtopo.dart';
 import 'extract.dart';
-import 'home.dart';
 import 'lance.dart';
 
 class Navegation extends StatefulWidget {
@@ -19,7 +19,7 @@ class _NavegationState extends State<Navegation> {
   TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    Home(),
+    Navtopo(),
     Lance(),
     Extract(),
     Perfil(),
