@@ -10,73 +10,49 @@ class Lance extends StatefulWidget {
 
 class _Lance extends State<Lance> {
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: FutureBuilder<List>(
-          future: Api.api.getProduto(),
-          initialData: List(),
-          builder: (context, snapshot) {
-            return snapshot.hasData
-                ? ListView.builder(
-                    itemCount: snapshot.data.length,
-                    itemBuilder: (x, int position) {
-                      final item = snapshot.data[position];
-                      return GestureDetector(
-                        onDoubleTap: () => print('abc'),
-                        child: Card(
-                          clipBehavior: Clip.antiAlias,
-                          child: Column(
-                            children: [
-                              ListTile(
-                                leading: Icon(Icons.arrow_drop_down_circle),
-                                title: Text('celular ' + item.nome),
-                                subtitle: Text(
-                                  'Valor R\$ ' + item.preco,
-                                  style: TextStyle(
-                                      color: Colors.black.withOpacity(0.6)),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.all(16.0),
-                                child: Image.network(item.arquivo),
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: <Widget>[
-                                  IconButton(
-                                      onPressed: () {
-                                        // Perform some action
-                                      },
-                                      icon: Icon(
-                                        Icons.share_sharp,
-                                        color: Colors.grey[400],
-                                      )),
-                                  IconButton(
-                                      onPressed: () {
-                                        // Perform some action
-                                      },
-                                      icon: Icon(
-                                        Icons.star_border,
-                                        color: Colors.grey[400],
-                                      )),
-                                  IconButton(
-                                    onPressed: () {
-                                      // Perform some action
-                                    },
-                                    icon: Icon(
-                                      Icons.gavel_sharp,
-                                      color: Colors.red[900],
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      );
-                    })
-                : Center(child: CircularProgressIndicator());
-          }),
-    );
+        return   Card(
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.arrow_drop_down_circle),
+                  title: const Text('Card title 1'),
+                  subtitle: Text(
+                    'Secondary Text',
+                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                    style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                  ),
+                ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.start,
+                  children: [
+                    FlatButton(
+                      textColor: const Color(0xFF6200EE),
+                      onPressed: () {
+                        // Perform some action
+                      },
+                      child: const Text('ACTION 1'),
+                    ),
+                    FlatButton(
+                      textColor: const Color(0xFF6200EE),
+                      onPressed: () {
+                        // Perform some action
+                      },
+                      child: const Text('ACTION 2'),
+                    ),
+                  ],
+                ),
+                Image.asset('assets/teste.png'),
+                Image.asset('assets/logo.png'),
+              ],
+            ),
+          );
+  
   }
 }
