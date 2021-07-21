@@ -3,7 +3,7 @@ import 'package:bid_leilao/pages/navtopo.dart';
 import 'package:bid_leilao/profile/perfil.dart';
 import 'package:flutter/material.dart';
 import 'navtopo.dart';
-import 'extract.dart';
+
 import 'lance.dart';
 
 class Navegation extends StatefulWidget {
@@ -21,7 +21,7 @@ class _NavegationState extends State<Navegation> {
   List<Widget> _widgetOptions = <Widget>[
     Navtopo(),
     Lance(),
-    Extract(),
+   
     Perfil(),
   ];
 
@@ -55,10 +55,7 @@ class _NavegationState extends State<Navegation> {
             icon: Icon(Icons.gavel_sharp),
             label: 'Lance',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.receipt_rounded),
-            label: 'extrato',
-          ),
+        
           BottomNavigationBarItem(
             icon: Icon(Icons.account_circle),
             label: 'Perfil',

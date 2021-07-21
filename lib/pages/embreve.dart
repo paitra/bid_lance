@@ -3,12 +3,12 @@ import 'package:bid_leilao/service/Api.dart';
 import 'package:flutter/material.dart';
 
 
-class Home extends StatefulWidget {
+class Embreve extends StatefulWidget {
   @override
-  _Home createState() => _Home();
+  _Embreve createState() => _Embreve();
 }
 
-class _Home extends State<Home> {
+class _Embreve extends State<Embreve> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder<List>(
@@ -43,32 +43,9 @@ class _Home extends State<Home> {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: <Widget>[
-                                  IconButton(
-                                      onPressed: () {
-                                        // Perform some action
-                                      },
-                                      icon: Icon(
-                                        Icons.share_sharp,
-                                        color: Colors.grey[400],
-                                      )),
-                                  IconButton(
-                                      onPressed: () {
-                                        // Perform some action
-                                      },
-                                      icon: Icon(
-                                        Icons.star_border,
-                                        color: Colors.grey[400],
-                                      )),
-                                  IconButton(
-                                    onPressed: () {
-                                      // Perform some action
-                                    },
-                                    icon: Icon(
-                                      Icons.gavel_sharp,
-                                      color: Colors.red[900],
-                                    ),
-                                  ),
-                                ],
+
+                                   Text('Iniciara dia 26/07/2021')
+                                   ],
                               )
                             ],
                           ),

@@ -1,4 +1,6 @@
-import 'package:bid_leilao/pages/home.dart';
+import 'package:bid_leilao/pages/embreve.dart';
+import 'package:bid_leilao/pages/fechados.dart';
+import 'package:bid_leilao/pages/iniciados.dart';
 import 'package:flutter/material.dart';
 
 class Navtopo extends StatefulWidget {
@@ -30,9 +32,9 @@ class _NavtopoState extends State<Navtopo> {
           ),
           body: new TabBarView(
             children: <Widget>[
-              Home(),
-              new Text("Cart Page"),
-              Text("iniciados")
+              Fechados(),
+              Iniciados(),
+              Embreve()
             ],
           ),
         ),

@@ -1,6 +1,4 @@
-import 'package:bid_leilao/service/Api.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class Lance extends StatefulWidget {
   @override
@@ -17,35 +15,57 @@ class _Lance extends State<Lance> {
             child: Column(
               children: <Widget>[
                 Container(
-                  height: 410,
+                  height: 300,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       Container(
-                        height: 120.0,
+                        height: 140.0,
                         width: 410.0,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/teste.png'),
+                            image: AssetImage('assets/celular.png'),
                             fit: BoxFit.fill,
                           ),
                           shape: BoxShape.rectangle,
                         ),
                       ),
                       Container(
-                        width: 200,
-                        color: Colors.blueGrey,
+                        height: 140.0,
+                        width: 410.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/celular.png'),
+                            fit: BoxFit.fill,
+                          ),
+                          shape: BoxShape.rectangle,
+                        ),
                       ),
                       Container(
-                        width: 200,
-                        color: Colors.green,
+                        height: 140.0,
+                        width: 410.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/celular.png'),
+                            fit: BoxFit.fill,
+                          ),
+                          shape: BoxShape.rectangle,
+                        ),
                       ),
-                      Container(
-                        width: 200,
-                        color: Colors.grey,
-                      )
+                     
                     ],
                   ),
+                ),
+                Container(
+                  width: 600,
+                  height: 60,
+                  alignment: Alignment.center,
+                  color: Colors.red,
+                  child: Text("Ultimos lances",
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                      )),
                 ),
                 Container(
                   height: 200,
@@ -56,42 +76,37 @@ class _Lance extends State<Lance> {
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.yellowAccent,
+                        color: Colors.grey[50],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.blue,
+                        color: Colors.grey[200],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.green,
+                        color: Colors.grey[50],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.red,
+                        color: Colors.grey[200],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.yellowAccent,
+                        color: Colors.grey[50],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.blue,
+                        color: Colors.grey[200],
                       ),
                       Container(
                         width: 50,
                         height: 40,
-                        color: Colors.green,
-                      ),
-                      Container(
-                        width: 50,
-                        height: 40,
-                        color: Colors.red,
+                        color: Colors.grey[50],
                       )
                     ],
                   ),
